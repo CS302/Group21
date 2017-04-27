@@ -4,3 +4,6 @@ C:\Users\Alex-Vaio\Desktop\Group21\Group21\bin\Debug\Group21.pdb
 C:\Users\Alex-Vaio\Desktop\Group21\Group21\obj\Debug\Group21.csprojResolveAssemblyReference.cache
 C:\Users\Alex-Vaio\Desktop\Group21\Group21\obj\Debug\Group21.exe
 C:\Users\Alex-Vaio\Desktop\Group21\Group21\obj\Debug\Group21.pdb
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Group21\bin\Debug\Group21.exe.config
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Group21\obj\Debug\Group21.exe
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Group21\obj\Debug\Group21.pdb
