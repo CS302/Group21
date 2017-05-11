@@ -67,7 +67,7 @@ namespace Group21
             Console.WriteLine(date.DayOfWeek);
             
             Console.ForegroundColor = ConsoleColor.Yellow;
-
+            
             Users user = Users.Guest;
             Console.WriteLine((int)user);
             if (user == Users.Guest)
@@ -76,6 +76,12 @@ namespace Group21
             }
             
             Console.WriteLine("Goodbye, world!" + number);
+
+            DateTime date1 = new DateTime(2017, 04, 27, 18, 41, 0);
+            DateTime date2 = new DateTime(2017, 04, 30, 16, 52, 0);
+            Console.WriteLine(date2 - date1);
+            TimeSpan span = date2 - date1;
+            Console.WriteLine(span);
         }
     }
     enum Users
