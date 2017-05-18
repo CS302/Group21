@@ -10,27 +10,47 @@ namespace Lesson3_4
     {
         static void Main(string[] args)
         {
-            Worker[] workers = new Worker[3];
-            workers[0] = new Worker("John", 29, 123456);
-            workers[1] = new Worker("Bob", 39, 789456);
-            workers[2] = new Worker("Hulk", 59);
+            Worker[] workers = new Worker[5];
+            workers[0] = new Driver("John", 29, 123456, "BMW", 128);
+            workers[1] = new Manager("Bob", 39, 789456, 10);
+            workers[2] = new Manager("Hulk", 59, 321789, 7);
+            workers[3] = new Driver("Henry", 32, 654123, "Audi", 256);
+            workers[4] = new Manager("Sara", 35, 987321, 5);
             
-            Console.WriteLine(workers[0].Age);
+            //for (int i = 0; i < workers.Length; i++)
+            //{
+            //    workers[i].Print();
+            //    Console.WriteLine();
+            //}
 
+            Driver driver = new Driver("Henry", 32, 654123, "Audi", 256);
+            Worker worker = driver;
+            Console.WriteLine(worker.Age);
+
+            Driver dr = (Driver)worker;
+            Console.WriteLine(dr.hours);
             Console.WriteLine();
 
-            Worker.PrintWorkers(workers);
+            Manager manager = new Manager("Bob", 39, 789456, 10);
+            worker = manager;
+            dr = worker as Driver;
+            if (dr != null)
+            {
+                Console.WriteLine(dr.hours);
+            }
 
-            Console.WriteLine(Worker.count);
+            Random rnd = new Random();
+            rnd.Next(1, 11);
         }
     }
 
-    class Worker
+    abstract class Worker
     {
         private string name;    //поле
         private int age;        //поле
         public int snn;        //поле
-        
+        protected int salary;
+
         public static int count;
         
         public string Name
@@ -71,13 +91,15 @@ namespace Lesson3_4
         {
             return age;
         }
-        public void Print()     //метод
+        public virtual void Print()     //метод
         {
             Console.WriteLine("Имя: " + name);
             Console.WriteLine("Возраст: " + age);
             Console.WriteLine("ИНН: " + snn);
-            Console.WriteLine();
+            
         }
+
+        public abstract int GetBonus();
 
         public static void PrintWorkers(Worker[] workers)
         {
@@ -99,6 +121,7 @@ namespace Lesson3_4
             this.name = name;
             Age = age;
             this.snn = snn;
+            salary = 35000;
             count++;
         }
 
@@ -111,4 +134,71 @@ namespace Lesson3_4
             count = 0;
         }
     }
+
+    sealed class Driver : Worker
+    {
+        public string carType;
+        public int hours;
+
+        public Driver(string name, int age, int snn, string carType, int hours)
+            : base(name, age, snn)
+        {
+            this.carType = carType;
+            this.hours = hours;
+            salary = 45000;
+        }
+
+        public override int GetBonus()
+        {
+            return hours * 50;
+        }
+
+        public override void Print()
+        {
+            base.Print();
+            Console.WriteLine("Машина: " + carType);
+            Console.WriteLine("Часы: " + hours);
+            Console.WriteLine();
+        }
+    }
+
+    class Manager : Worker, IPayTax 
+    {
+        public int projCount;
+
+        public Manager(string name, int age, int snn, int projCount)
+            : base(name, age, snn)
+        {
+            this.projCount = projCount;
+            salary = 50000;
+        }
+
+        public override int GetBonus()
+        {
+            return projCount * 1500;
+        }
+
+        public override void Print()
+        {
+            base.Print();
+            Console.WriteLine("Кол-во проектов: " + projCount);
+            Console.WriteLine();
+        }
+
+        public double PayTax()
+        {
+            return 0.13 * salary;
+        }
+    }
+
+    interface IPayTax
+    {
+        double PayTax();
+    }
+
+    //class SuperMan : Driver, Manager
+    //{ }
+
+    //class SuperDriver : Driver
+    //{ }
 }
