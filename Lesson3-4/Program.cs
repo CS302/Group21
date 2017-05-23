@@ -16,7 +16,7 @@ namespace Lesson3_4
             workers[2] = new Manager("Hulk", 59, 321789, 7);
             workers[3] = new Driver("Henry", 32, 654123, "Audi", 256);
             workers[4] = new Manager("Sara", 35, 987321, 5);
-            
+
             //for (int i = 0; i < workers.Length; i++)
             //{
             //    workers[i].Print();
@@ -52,7 +52,7 @@ namespace Lesson3_4
         protected int salary;
 
         public static int count;
-        
+
         public string Name
         {
             get { return name; }
@@ -70,7 +70,7 @@ namespace Lesson3_4
                     Console.WriteLine("Неверно задан возраст!");
                 }
             }
-            get 
+            get
             {
                 return age;
             }
@@ -96,7 +96,7 @@ namespace Lesson3_4
             Console.WriteLine("Имя: " + name);
             Console.WriteLine("Возраст: " + age);
             Console.WriteLine("ИНН: " + snn);
-            
+
         }
 
         public abstract int GetBonus();
@@ -127,7 +127,7 @@ namespace Lesson3_4
 
         public Worker(string name, int age)
             : this(name, age, 0)
-        {   }
+        { }
 
         static Worker()
         {
@@ -162,7 +162,7 @@ namespace Lesson3_4
         }
     }
 
-    class Manager : Worker, IPayTax 
+    class Manager : Worker, IPayTax
     {
         public int projCount;
 

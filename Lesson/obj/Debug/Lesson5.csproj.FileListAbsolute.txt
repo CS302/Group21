@@ -1,0 +1,6 @@
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson\bin\Debug\Lesson.exe.config
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson\bin\Debug\Lesson.exe
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson\bin\Debug\Lesson.pdb
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson\obj\Debug\Lesson5.csprojResolveAssemblyReference.cache
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson\obj\Debug\Lesson.exe
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson\obj\Debug\Lesson.pdb
