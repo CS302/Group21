@@ -1,0 +1,6 @@
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson6_ReadWrite\bin\Debug\Lesson6_ReadWrite.exe.config
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson6_ReadWrite\bin\Debug\Lesson6_ReadWrite.exe
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson6_ReadWrite\bin\Debug\Lesson6_ReadWrite.pdb
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson6_ReadWrite\obj\Debug\Lesson6_ReadWrite.exe
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson6_ReadWrite\obj\Debug\Lesson6_ReadWrite.pdb
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson6_ReadWrite\obj\Debug\Lesson6_ReadWrite.csprojResolveAssemblyReference.cache
