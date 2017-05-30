@@ -11,6 +11,7 @@ namespace Lesson6_ReadWrite
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = Encoding.UTF8;
             string path = @"C:\Lesson6\2.txt";
             using (FileStream stream = new FileStream(path, FileMode.Create, FileAccess.Write))
             {
@@ -33,7 +34,7 @@ namespace Lesson6_ReadWrite
             //double x = double.Parse(reader.ReadLine());
             //double y = double.Parse(reader.ReadLine());
             //string label = reader.ReadLine();
-            stream.Close();
+            //stream.Close();
             
             //Console.WriteLine(x);
             //Console.WriteLine(y);

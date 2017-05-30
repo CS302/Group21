@@ -78,7 +78,7 @@ namespace Lesson
             //double y = 789.654;
             //Console.WriteLine("X = {0}\nY = {1}", x, y);
 
-            string text = string.Format("X = {0}\nY = {1}", x, y);
+            //string text = string.Format("X = {0}\nY = {1}", x, y);
             //Console.WriteLine(text);
             //text.EndsWith
             //double price = 99.9999;
