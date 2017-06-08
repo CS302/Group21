@@ -79,6 +79,8 @@ namespace Lesson7
 
             Point<Worker, double> p2 = new Point<Worker, double>(new Driver("John", 29, 123456, "BMW", 128), 600000);
             p2.Print();
+
+            Console.ReadLine();
             
         }
     }
