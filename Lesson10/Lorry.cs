@@ -7,12 +7,18 @@ using System.Threading.Tasks;
 
 namespace Lesson10
 {
-    public class Lorry
+    public class Lorry : List<Good>
     {
         private double maxWeight;
         private double weight;
         private Guid id;
-        public List<Good> items; 
+        //public List<Good> items; 
+
+        //индексатор
+        //public Good this[int i]
+        //{
+        //    get { return items[i]; }
+        //}
 
         public Guid Id
         {
@@ -23,7 +29,7 @@ namespace Lesson10
         {
             this.maxWeight = maxWeight;
             this.id = Guid.NewGuid();
-            items = new List<Good>();
+            //items = new List<Good>();
         }
 
         public bool Add(Good good)
@@ -31,7 +37,7 @@ namespace Lesson10
             if (weight + good.Weight <= maxWeight)
             {
                 good.Id = this.id;
-                items.Add(good);
+                base.Add(good);
                 weight += good.Weight;
                 return true;
             }
@@ -41,10 +47,10 @@ namespace Lesson10
 
         public bool RemoveAt(int number)
         {
-            if ((number >= 0) && (number < items.Count))
+            if ((number >= 0) && (number < base.Count))
             {
-                weight -= items[number].Weight;
-                items.RemoveAt(number);
+                weight -= base[number].Weight;
+                base.RemoveAt(number);
                 return true;
             }
             else

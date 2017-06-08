@@ -1,4 +1,6 @@
-﻿using Lesson10.Goods;
+﻿//#define TRIAL
+//#undef TRIAL
+using Lesson10.Goods;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,6 +24,12 @@ namespace Lesson10
 
         private void btn_DoSmth_Click(object sender, EventArgs e)
         {
+#if TRIAL
+            MessageBox.Show("Купите лицензию!");
+#else
+#warning Дописать проверки!
+            //todo Дописать проверки
+//#error Дописать проверки!
             int bCount = int.Parse(tb_bCount.Text);
             if (bCount > 0)
             {
@@ -36,12 +44,13 @@ namespace Lesson10
                 for (int i = 0; i < dCount; i++)
                     lorry.Add(disc);
             }
-            MessageBox.Show(String.Format("В грузовике {0} товаров", lorry.items.Count));
+            MessageBox.Show(String.Format("В грузовике {0} товаров", lorry.Count));
+#endif
         }
 
         private void btn_Show_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(lorry.items[1].Print());
+            MessageBox.Show(lorry[1].Print());
         }
     }
 }
