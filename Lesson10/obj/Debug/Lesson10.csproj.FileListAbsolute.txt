@@ -6,3 +6,4 @@ C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson10\obj\Debug\Lesson10.Properti
 C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson10\obj\Debug\Lesson10.csproj.GenerateResource.Cache
 C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson10\obj\Debug\Lesson10.exe
 C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson10\obj\Debug\Lesson10.pdb
+C:\Users\Alex-Vaio\Documents\GitHub\Group21\Lesson10\obj\Debug\Lesson10.Form1.resources

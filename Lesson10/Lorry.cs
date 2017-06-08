@@ -32,6 +32,7 @@ namespace Lesson10
             {
                 good.Id = this.id;
                 items.Add(good);
+                weight += good.Weight;
                 return true;
             }
             else
