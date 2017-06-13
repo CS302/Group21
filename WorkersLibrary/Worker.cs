@@ -11,7 +11,13 @@ namespace WorkersLibrary
     {
         private string name;    //поле
         private int age;        //поле
-        public int snn;        //поле
+        private int snn;        //поле
+
+        public int Snn
+        {
+            get { return snn; }
+            set { snn = value; }
+        }
         protected int salary;
 
         public static int count;
